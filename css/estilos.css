@@ -1,0 +1,106 @@
+/* Fuente de google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+/* Fondo general y texto */
+body {
+  font-family: Arial, sans-serif; 
+  background-image: url(../img/fondo.png); 
+  background-size: repeat;
+  background-position: center;
+  color: #222;
+  padding: 1rem; 
+}
+
+/* Contenedor centrado */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1rem;
+}
+
+/* Encabezado y títulos */
+header h1, header h2, h3, h2 {
+  font-family: 'Roboto Slab', serif; 
+  margin-bottom: 1rem;
+}
+
+/* Menú de navegación */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+nav a:hover {
+  color: lightblue;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #333;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Layouts con flexbox */
+
+/* Página de inicio: 3 columnas iguales */
+.layout-3col {
+  display: flex;
+}
+
+.layout-3col section {
+  flex: 1; 
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+
+/* Página de trayectoria: 2 columnas de ancho diferente */
+.layout-2col {
+  display: flex;
+}
+
+.layout-2col .col-izq {
+  flex: 2; /* más ancha */
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: #fafafa;
+}
+
+.layout-2col .col-der {
+  flex: 1; /* más angosta */
+  margin: 0.5rem;
+  padding: 1rem;
+  background-color: #eee;
+}
+
+/* Página de conceptos: texto + interacción */
+.layout-2col .col-der {
+  background-color: #e0f0ff;
+}
+
+/* Listas */
+ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+
+
