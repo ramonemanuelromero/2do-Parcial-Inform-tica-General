@@ -1,3 +1,28 @@
+//galeria de obras
+const obrasGaleria = [
+    { nombre: "Atomism", año: 2001, imagen: "img/atomism.jpg" },
+    { nombre: "In Silico", año: 2018, imagen: "img/inSilico.PNG" },
+    { nombre: "CENTURY", año: 2012, imagen: "img/century.png" },
+    { nombre: "Caesuras", año: 2020, imagen: "img/caesuras.jpg" },
+    { nombre: "Compressed Cinema", año: 2020, imagen: "img/compressedCinema.jpg" }
+];
+const galeria = document.querySelector('#contenedor-galeria');
+
+if (galeria !== null) {
+    for (let i = 0; i < obrasGaleria.length; i++) {
+        galeria.innerHTML += `
+            <article class="tarjeta-obra">
+                <img src="${obrasGaleria[i].imagen}" alt="${obrasGaleria[i].nombre}">
+                <h3>${obrasGaleria[i].nombre}</h3>
+                <p>Año: ${obrasGaleria[i].año}</p>
+            </article>
+        `;
+    }
+}
+
+
+
+
 //Generador Datos Curiosos
 //capturo con "querySelector" los elementos boton y parrafo, y los guardo en las constantes elBoton y elTexto para usarlos luego  
 const elBoton = document.querySelector('#boton-dato');
@@ -12,9 +37,10 @@ const datosCuriosos = [
   "Profesor en el Departamento de Diseño de Medios en UCLA.",
 ];
 
+
 //Luego para que el programa responda al usuario uso el metodo "addEventListener", para que al hacer click en el boton (boton-dato) se ejecute la funcion "mostrarDato"
 elBoton.addEventListener('click', function() {
-    mostrarDato(); 
+   mostrarDato(); 
 });
 
 //Función para mostrar un dato curioso al azar
@@ -25,23 +51,8 @@ function mostrarDato() {
   //por ultimo se usa este numero que devuelve la operacion anterior para elegir uno de los datos curiosos de la lista segun la posicion que ocupa y lo inserta en el HTML con la propiedad innerText y cambia el texto en la pagina
 }
 
-//galeria de obras
-const obrasGaleria = [
-    { nombre: "Atomism", año: 2001, imagen: "./img/atomism.jpg" },
-    { nombre: "In Silico", año: 2018, imagen: "./img/inSilico.PNG" },
-    { nombre: "CENTURY", año: 2012, imagen: "./img/century.png" },
-    { nombre: "Caesuras", año: 2020, imagen: "./img/caesuras.jpg" },
-    { nombre: "Compressed Cinema", año: 2020, imagen: "./img/compressedCinema.jpg" }
-];
 
-const galeria = document.querySelector('#contenedor-galeria');
 
-for (let i = 0; i < obrasGaleria.length; i++) {
-    galeria.innerHTML += `
-        <article class="tarjeta-obra">
-            <img src="${obrasGaleria[i].imagen}" alt="${obrasGaleria[i].nombre}">
-            <h3>${obrasGaleria[i].nombre}</h3>
-            <p>Año: ${obrasGaleria[i].año}</p>
-        </article>
-    `;
-}
+
+
+
