@@ -54,6 +54,24 @@ footer {
   font-size: 0.9rem;
 }
 
+header, section {
+    text-align: center; /* Centra elementos en línea como <img> [3] */
+}
+
+/* Ajustamos el tamaño de la imagen del encabezado */
+header img {
+    width: 200px; /* Podés usar px o rem para un tamaño fijo [9] */
+    height: auto;  /* Mantiene la proporción de la imagen */
+    margin-top: 1rem; /* Espaciado opcional arriba [6] */
+}
+
+/* Ajustamos la imagen de la obra dentro del main */
+section img {
+    width: 50%;   /* Usamos porcentaje para que sea más pequeña y fluida [8] */
+    max-width: 400px; /* Evita que se agrande demasiado en pantallas grandes [10] */
+    height: auto;
+}
+
 /* Layouts con flexbox */
 
 /* index: 3 columnas iguales */
@@ -103,19 +121,19 @@ li {
 }
 
 #contenedor-galeria {
-    display: flex;          
-    flex-wrap: wrap;      
-    justify-content: center; 
-    gap: 20px;              
+    display: flex;
+    flex-wrap: wrap;       
+    gap: 15px;            
+    justify-content: center;
 }
 
 .tarjeta-obra {
-    width: 250px;          
-    text-align: center;    
+    width: 200px;      
+    text-align: center;
 }
 
 .tarjeta-obra img {
-    width: 100%;         
+    width: 100%;           
     height: auto;
 }
 
